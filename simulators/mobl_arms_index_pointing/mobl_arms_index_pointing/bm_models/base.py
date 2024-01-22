@@ -59,7 +59,7 @@ class BaseBMModel(ABC):
     # Get joint names (dependent and independent)
     self._joint_names = [mujoco.mj_id2name(bm_model, mujoco.mjtObj.mjOBJ_JOINT, i) for i in range(bm_model.njnt)]
     self._dependent_joint_names = {self._joint_names[idx] for idx in
-                                  np.unique(bm_model.eq_obj1id[bm_model.eq_active.astype(bool)])} \
+                                  np.unique(bm_model.eq_obj1id[bm_model.eq_active0.astype(bool)])} \
       if bm_model.eq_obj1id is not None else set()
     self._independent_joint_names = set(self._joint_names) - self._dependent_joint_names
 

@@ -355,6 +355,8 @@ class Simulator(gym.Env):
 
     if 'llc' in self.config:  #if HRL approach is used
         llc_simulator_folder = os.path.join(output_path(), self.config["llc"]["simulator_name"])
+        #llc_simulator_folder = "/Users/juliette-michelleburkhardt/PycharmProjects/user-in-the-box/simulators/mobl_arms_llc_5s"
+
         if llc_simulator_folder not in sys.path:
             sys.path.insert(0, llc_simulator_folder)
         if not os.path.exists(llc_simulator_folder):
@@ -379,7 +381,6 @@ class Simulator(gym.Env):
           self._independent_joints.append(joint_id)
         self._jnt_range = self._model.jnt_range[self._independent_joints]
 
-    
     #To normalize joint ranges for llc
   def _normalise_qpos(self, qpos):
     # Normalise to [0, 1]

@@ -1,6 +1,6 @@
 <mujoco model="MuJoCo Model">
   <compiler angle="radian" autolimits="true"/>
-  <option collision="predefined"/>
+ <!-- <option collision="predefined"/> -->
   <size njmax="1000" nconmax="400" nuser_jnt="1"/>
   <visual>
     <global offwidth="1280" offheight="960"/>

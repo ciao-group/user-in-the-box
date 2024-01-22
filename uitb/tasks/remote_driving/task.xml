@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <mujoco>
     <compiler angle="radian"/>
-    <option collision="predefined" timestep="0.002"/>
+<!--    <option collision="predefined" timestep="0.002"/> -->
     <size njmax="1000" nconmax="400"/>
 
     <asset>

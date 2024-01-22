@@ -1,6 +1,6 @@
 <mujoco model="MoBL_ARMS_Upper_Limb_Model_OpenSim">
     <compiler angle="radian"/>
-    <option collision="predefined"/>
+ <!--   <option collision="predefined"/> -->
     <default class="mobl-arms">
         <joint limited="true" stiffness="2" armature="0.1" damping="0.5"/>
         <geom margin="0.001" rgba="0.8 0.6 0.4 1"/>
